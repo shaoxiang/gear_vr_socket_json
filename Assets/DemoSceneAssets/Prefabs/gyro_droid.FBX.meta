@@ -1,0 +1,185 @@
+fileFormatVersion: 2
+guid: af08af4ee28cc264a91379b2a59798f6
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Capsule006
+    100004: Capsule005
+    100006: Capsule001
+    100008: Capsule002
+    100010: Capsule003
+    100012: Capsule004
+    100014: Sphere001
+    100016: mesh13
+    100018: mesh11
+    100020: mesh9
+    100022: mesh8
+    100024: mesh7
+    100026: mesh6
+    100028: mesh5
+    100030: mesh4
+    100032: mesh3
+    100034: mesh1
+    100036: Model
+    100038: robot
+    100040: Dummy001
+    100042: Tube001
+    100044: Tube002
+    100046: Tube003
+    400000: //RootNode
+    400002: Capsule006
+    400004: Capsule005
+    400006: Capsule001
+    400008: Capsule002
+    400010: Capsule003
+    400012: Capsule004
+    400014: Sphere001
+    400016: mesh13
+    400018: mesh11
+    400020: mesh9
+    400022: mesh8
+    400024: mesh7
+    400026: mesh6
+    400028: mesh5
+    400030: mesh4
+    400032: mesh3
+    400034: mesh1
+    400036: Model
+    400038: robot
+    400040: Dummy001
+    400042: Tube001
+    400044: Tube002
+    400046: Tube003
+    2300000: Capsule006
+    2300002: Capsule005
+    2300004: Capsule001
+    2300006: Capsule002
+    2300008: Capsule003
+    2300010: Capsule004
+    2300012: Sphere001
+    2300014: mesh13
+    2300016: mesh11
+    2300018: mesh9
+    2300020: mesh8
+    2300022: mesh7
+    2300024: mesh6
+    2300026: mesh5
+    2300028: mesh4
+    2300030: mesh3
+    2300032: mesh1
+    2300034: Tube001
+    2300036: Tube002
+    2300038: Tube003
+    3300000: Capsule006
+    3300002: Capsule005
+    3300004: Capsule001
+    3300006: Capsule002
+    3300008: Capsule003
+    3300010: Capsule004
+    3300012: Sphere001
+    3300014: mesh13
+    3300016: mesh11
+    3300018: mesh9
+    3300020: mesh8
+    3300022: mesh7
+    3300024: mesh6
+    3300026: mesh5
+    3300028: mesh4
+    3300030: mesh3
+    3300032: mesh1
+    3300034: Tube001
+    3300036: Tube002
+    3300038: Tube003
+    4300000: stem_001
+    4300002: cereb_001
+    4300004: corpus_001
+    4300006: occipit_001
+    4300008: pariet_001
+    4300010: pitua_001
+    4300012: temp_001
+    4300014: frontal_003
+    4300016: Object001
+    4300018: Tube003
+    4300020: Tube002
+    4300022: Tube001
+    4300024: mesh1
+    4300026: mesh3
+    4300028: mesh4
+    4300030: mesh5
+    4300032: mesh6
+    4300034: mesh7
+    4300036: mesh8
+    4300038: mesh9
+    4300040: mesh11
+    4300042: mesh13
+    4300044: Sphere001
+    4300046: Capsule004
+    4300048: Capsule003
+    4300050: Capsule002
+    4300052: Capsule001
+    4300054: Capsule005
+    4300056: Capsule006
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 3
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 0
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0399999991
+    meshCompression: 3
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

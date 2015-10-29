@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{4BBB85EC-5CD9-85B7-ACAE-5137DF754D48}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_1_0;UNITY_5_1;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_LICENSE;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_EDITOR_METRICS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>S:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>S:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\DemoSceneAssets\Scripts\BackToScene.cs" />
+     <Compile Include="Assets\DemoSceneAssets\Scripts\CheckAvailability.cs" />
+     <Compile Include="Assets\DemoSceneAssets\Scripts\CloseApplication.cs" />
+     <Compile Include="Assets\DemoSceneAssets\Scripts\CreateHouses.cs" />
+     <Compile Include="Assets\DemoSceneAssets\Scripts\DampenCameraMovement.cs" />
+     <Compile Include="Assets\DemoSceneAssets\Scripts\LoaderGUI.cs" />
+     <Compile Include="Assets\DemoSceneAssets\Scripts\MoveToPoint.cs" />
+     <Compile Include="Assets\DemoSceneAssets\Scripts\Rotate.cs" />
+     <Compile Include="Assets\DemoSceneAssets\Scripts\SwitchCamera.cs" />
+     <Compile Include="Assets\GyroDroid\SampleScripts\LightControl.cs" />
+     <Compile Include="Assets\GyroDroid\SampleScripts\MagneticFieldCamera.cs" />
+     <Compile Include="Assets\GyroDroid\SampleScripts\MinimalSensorCamera.cs" />
+     <Compile Include="Assets\GyroDroid\SampleScripts\MoveByLinearAcc.cs" />
+     <Compile Include="Assets\GyroDroid\SampleScripts\SpaceShipControl.cs" />
+     <Compile Include="Assets\GyroDroid\SampleScripts\SwitchRotationMode.cs" />
+     <Compile Include="Assets\GyroDroid\SampleScripts\TurntableSensorCamera.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\Debug\SensorStatisticsGUI.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\Devices\SensorDeviceAndroid.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\Devices\SensorDeviceIPhone.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\Devices\SensorDeviceUnity.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\Devices\SensorEditorUnity.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\Enums\RotationFallbackType.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\Enums\SensorDelay.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\Enums\SensorStatus.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\Enums\SensorSurfaceRotation.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\Enums\Type.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\Filters\AngleFilter.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\Filters\Filter.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\Filters\FloatFilter.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\Filters\QuaternionFilter.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\Filters\Vector3Filter.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\Sensor.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\SensorHelper.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\Utils\GravityValue.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\Utils\LightValue.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\Utils\MagneticFieldValue.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\Utils\NonAndroidFallback.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\Utils\PressureValue.cs" />
+     <Compile Include="Assets\GyroDroid\Scripts\Utils\Sensor.Information.cs" />
+     <Compile Include="Assets\JSON Tests\CSharp\Test_CSharp.cs" />
+     <Compile Include="Assets\euler_test.cs" />
+     <Compile Include="Assets\networkSocket.cs" />
+     <None Include="Assets\GyroDroid-unitypackage-README.txt" />
+     <None Include="Assets\DemoSceneAssets\Materials\DoubleSided.shader" />
+     <None Include="Assets\DemoSceneAssets\Materials\Mobile_Diffuse.shader" />
+     <None Include="Assets\JSON Tests\TroubleShoot.txt" />
+     <None Include="Assets\GyroDroid\ReadMe-4.0.txt" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>S:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>S:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>S:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="ICSharpCode.SharpZipLib">
+ <HintPath>Z:/unity3Dtest/unitytest/unity-network-client-master/Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>S:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{A314CA6A-5843-DBA8-D2BA-493B3481D631}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
