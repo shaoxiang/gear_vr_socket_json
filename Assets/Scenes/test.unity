@@ -388,8 +388,6 @@ MonoBehaviour:
   yaw: 0
   pitch: 0
   start_flag: 0
-  host: 192.168.1.108
-  port: 50000
 --- !u!1 &1493494281
 GameObject:
   m_ObjectHideFlags: 0

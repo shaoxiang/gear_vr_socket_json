@@ -3,9 +3,11 @@ using System.Collections;
 using UnityEngine.UI;
 using Ovr;
 using SimpleJSON;
+using System.Net;  
 using System.Net.Sockets;
 using System.IO;
 using System;
+using System.Text; 
 
 public class Data_processing : MonoBehaviour {
 	
@@ -13,14 +15,10 @@ public class Data_processing : MonoBehaviour {
 	public double roll,yaw,pitch;
 	public bool start_flag = false;
 	//socket
-	public String host = "localhost";
-	public Int32 port = 50000;
+	IPAddress ipAdr ;  
+	IPEndPoint ipEp ; 
+	Socket clientScoket = new Socket(AddressFamily.InterNetwork,SocketType.Stream,ProtocolType.Tcp);
 	internal Boolean socket_ready = false;
-	internal String input_buffer = "";
-	TcpClient tcp_socket;
-	NetworkStream net_stream;
-	StreamWriter socket_writer;
-	StreamReader socket_reader;
 
 	void Awake()
 	{
@@ -39,37 +37,31 @@ public class Data_processing : MonoBehaviour {
 		I["roll"].AsDouble = roll;
 		writeSocket(I.ToString());
 	}
-	
 	// Update is called once per frame
 	//void Update(){
-
 	//}
 	void FixedUpdate() {
 		pitch = OVRManager.display.GetHeadPose (0).orientation.eulerAngles.x;
 		yaw = OVRManager.display.GetHeadPose (0).orientation.eulerAngles.y;
 		roll = OVRManager.display.GetHeadPose (0).orientation.eulerAngles.z;
-		//string received_data = readSocket();
+		///Touch Pad
+		///Input.mousePosition.x;Input.mousePosition.y;Input.GetMouseButtonDown (0);Input.GetMouseButtonUp (0);
 		//if (Input.GetMouseButton (0)) {
 			//start_flag = true;
-		//} 
-		//if (Input.GetKeyDown (KeyCode.Escape))
-		//{
-			//Application.Quit();
 		//}
 		//if (start_flag) {
-
-			TextSensorData.text ="pitch:"+pitch.ToString()+"\n";//pitch
-			TextSensorData.text +="yaw:"+yaw.ToString()+"\n";//yaw
-			TextSensorData.text +="roll:"+roll.ToString()+"\n";//roll
-			sensor_to_json ();
+		//click the touch button to start.Do something.
 		//}
-		
-		//if (received_data != "")
-		//{
-			// Do something with the received data,
-			// print it in the log for now
-			//Debug.Log(received_data);
-		//}
+		if (Input.GetKeyDown (KeyCode.Escape)	)
+		{
+			Application.Quit();
+		}
+		TextSensorData.text ="pitch:"+pitch.ToString()+"\n";//pitch
+		TextSensorData.text +="yaw:"+yaw.ToString()+"\n";//yaw
+		TextSensorData.text +="roll:"+roll.ToString()+"\n";//roll
+		sensor_to_json ();
+		//read data
+		readSocket ();
 	}
 			
 	void OnApplicationQuit()
@@ -81,12 +73,10 @@ public class Data_processing : MonoBehaviour {
 	{
 		try
 		{
-			tcp_socket = new TcpClient(host, port);
-			
-			net_stream = tcp_socket.GetStream();
-			socket_writer = new StreamWriter(net_stream);
-			socket_reader = new StreamReader(net_stream);
 			socket_ready = true;
+			ipAdr = IPAddress.Parse("127.0.0.1");//localhost
+			ipEp = new IPEndPoint (ipAdr, 50000);
+			clientScoket.Connect(ipEp);
 		}
 		catch (Exception e)
 		{
@@ -98,30 +88,27 @@ public class Data_processing : MonoBehaviour {
 	public void writeSocket(string line)
 	{
 		if (!socket_ready)
-			return;
-		//line = line + "\r\n";
-		socket_writer.Write(line);
-		socket_writer.Flush();
+			return; 
+		byte[] concent = Encoding.UTF8.GetBytes(line);          
+		clientScoket.Send(concent);
 	}
 	
-	public String readSocket()
+	public void readSocket()
 	{
 		if (!socket_ready)
-			return "";
-		
-		if (net_stream.DataAvailable)
-			return socket_reader.ReadLine();
-		
-		return "";
+			return;
+		byte[] response = new byte[1024];
+		int bytesRead = clientScoket.Receive(response);  
+		string input = Encoding.UTF8.GetString(response,0,bytesRead);
+		Debug.Log("Client request:"+input); 
 	}
 	
 	public void closeSocket()
 	{
 		if (!socket_ready)
 			return;
-		socket_writer.Close();
-		socket_reader.Close();
-		tcp_socket.Close();
+		clientScoket.Shutdown(SocketShutdown.Both);  
+		clientScoket.Close(); 
 		socket_ready = false;
 	}
 }
